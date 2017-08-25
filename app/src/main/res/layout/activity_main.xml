@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--方法2 动态的设置 这个是隐藏的布局，然后通过动态的设置高度达到效果 -->
+    <LinearLayout android:id="@+id/ll_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+    </LinearLayout>
+
+    <cn.demo.topbardemo.WidgetTopBar
+        android:id="@+id/wtb_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff9900"
+        tools:m_title="这是标题1"
+        tools:m_left_text="返回"
+        tools:m_right_image="@drawable/shared" />
+
+
+    <cn.demo.topbardemo.WidgetTopBar
+        android:layout_marginTop="10dp"
+        android:id="@+id/wtb_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:m_title="这是标题2"
+        tools:m_right_text="分享"
+        tools:m_left_image="@drawable/back" />
+
+    <cn.demo.topbardemo.WidgetTopBar
+        android:layout_marginTop="10dp"
+        android:id="@+id/wtb_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:m_title="这是标题3"
+        tools:m_left_image="@drawable/back" />
+</LinearLayout>
